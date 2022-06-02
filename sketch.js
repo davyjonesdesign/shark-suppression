@@ -21,20 +21,22 @@ function setup() {
       terrain[y][x] = 0;
     }
   }
-  freeze();
-  unfreeze();
-  
+  var unButton = createButton(' freeze ');
+  unButton.position(windowWidth - 75, 5);
+  unButton.mouseClicked(freeze);
 }
+
 function freeze() {
   var frButton = createButton('unfreeze');
-  frButton.position(windowWidth - 50, 30);
+  frButton.position(windowWidth - 75, 5);
   frButton.mouseClicked(unfreeze);
   noLoop();
 }
 function unfreeze() {
   loop();
   var unButton = createButton('freeze');
-  unButton.position(windowWidth - 43, 100);
+  unButton.position(windowWidth - 75, 5);
+  // unButton.mousePressed(function(){unButton.remove()});
   unButton.mouseClicked(freeze);
 
 }

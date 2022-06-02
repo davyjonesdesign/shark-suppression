@@ -2,6 +2,9 @@
   position: absolute;
   z-index: -100;
 }
+button {
+  width: 70px;
+}
 
 body {
   font-family: "Source Code Pro", monospace;
@@ -10,9 +13,6 @@ body {
   color: white;
   margin: 0;
   line-height: 1.5;
-}
-button {
-  rotate: -90deg;
 }
 strong {
   color: #ff998b;
