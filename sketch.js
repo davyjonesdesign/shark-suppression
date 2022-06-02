@@ -27,14 +27,14 @@ function setup() {
 }
 function freeze() {
   var frButton = createButton('unfreeze');
-  frButton.position(windowWidth - 80, windowHeight - 35);
+  frButton.position(windowWidth - 50, 30);
   frButton.mouseClicked(unfreeze);
   noLoop();
 }
 function unfreeze() {
   loop();
   var unButton = createButton('freeze');
-  unButton.position(windowWidth - 140, windowHeight - 35);
+  unButton.position(windowWidth - 43, 100);
   unButton.mouseClicked(freeze);
 
 }

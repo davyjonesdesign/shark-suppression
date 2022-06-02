@@ -38,18 +38,18 @@
         
           <div class="top-links">
               <router-link class="tooltip boater-link" to="/boaters" @click.native="eventBus.$emit('change-direction', 'slide-left')">
-                  <p class="tooltiptext"> I am a boater!</p>
+                  <p class="tooltiptext"> I am boater!</p>
                   <div class="right-point"></div>
-                  <div>
+                  <div class="img-wrap">
                       <img src="imgs/sailor.png" alt="boater">
                   </div>
               </router-link>
               <router-link class="tooltip dolphin-link" to="/dolphins" @click.native="eventBus.$emit('change-direction', 'slide-right')">
-                  <div>
+                  <div class="img-wrap">
                       <img src="imgs/dolphin.png" alt="dolphin">
                   </div>
                   <div class="left-point"></div>
-                  <p class="tooltiptext ">I am a dolphin!</p>
+                  <p class="tooltiptext ">I am dolphin!</p>
 
               </router-link>
           </div>
@@ -57,12 +57,12 @@
 
           <div class="bottom-link">
               <router-link class="tooltip shark-link" to="/sharks" @click.native="eventBus.$emit('change-direction', 'slide-down')">
-                  <div>
+                  <div class="img-wrap">
                       <img src="imgs/shark.png" alt="boater">
                   </div>
                   <div class="top-point">
       </div>
-                  <p class="tooltiptext">I am a shark!</p>
+                  <p class="tooltiptext">I am shark!</p>
               </router-link>
           </div>
         </div>
@@ -71,6 +71,16 @@
     <!-- boaters -->
     <script type="text/x-template" id="boaters">
       <div class="view-container boater-page_container">
+        <router-link  class="tooltip boater-link boaters-page_link page_link" to="/" @click.native="eventBus.$emit('change-direction', 'fade')">
+            <!-- <div class="top-point">
+            </div> -->
+            <p class="tooltiptext">Back</p>
+            <div class="bottom-point">
+            </div>
+            <div class="img-wrap">
+                <img src="imgs/sailor.png" alt="boater">
+            </div>
+        </router-link>
         <div class="boater-page_content">
             <h2> Boaters' Manifesto </h2>
             <p>
@@ -88,16 +98,7 @@
                 </li>
             </ul>
         </div>
-        <router-link  class="tooltip boater-link boaters-page_link page_link" to="/" @click.native="eventBus.$emit('change-direction', 'fade')">
-            <!-- <div class="top-point">
-            </div> -->
-            <p class="tooltiptext"> Take me Back</p>
-            <div class="bottom-point">
-            </div>
-            <div>
-                <img src="imgs/sailor.png" alt="boater">
-            </div>
-        </router-link>
+        
       </div>
     </script>
 
@@ -105,10 +106,10 @@
     <script type="text/x-template" id="dolphins">
       <div class="view-container boater-page_container dolphins-page_justify">
         <router-link  class="tooltip boater-link page_link" to="/" @click.native="eventBus.$emit('change-direction', 'fade')">
-            <p class="tooltiptext"> Take me Back</p>
+            <p class="tooltiptext">Back</p>
             <div class="bottom-point">
           </div>
-            <div>
+            <div class="img-wrap">
                 <img src="imgs/dolphin.png" alt="dolphin">
             </div>
         </router-link>
@@ -150,9 +151,9 @@
           <router-link  class="tooltip shark-link-back" to="/" @click.native="eventBus.$emit('change-direction', 'fade')">
 
               <div class="shark-link_bubble">
-                  <p class="tooltiptext"> Take me Back</p>
+                  <p class="tooltiptext">Back</p>
                     <div class="bottom-point"></div>
-              </div>
+              </div class="img-wrap">
                   <img src="imgs/shark2.png" alt="shark2">
           </router-link>
           <ul class="shark-page_content">
@@ -175,7 +176,7 @@
         <router-link  class="tooltip merch-icon" to="/" @click.native="eventBus.$emit('change-direction', 'fade')">
             <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16,0A16,16,0,1,0,32,16,16,16,0,0,0,16,0Zm0,29.75A13.75,13.75,0,1,1,29.75,16,13.76555,13.76555,0,0,1,16,29.75Z" fill="#fff"/><polygon points="14.109 11.934 12.518 10.343 8.452 14.409 6.861 16 8.452 17.591 12.518 21.657 14.109 20.066 11.168 17.125 24 17.125 24 14.875 11.168 14.875 14.109 11.934" fill="#fff"/></svg>
             <div class="top-point"></div>
-            <p class="tooltiptext">take me back</p>
+            <p class="tooltiptext">Back</p>
         </router-link>
           <div class="merch-page_content">
               <h2>
@@ -232,7 +233,7 @@
               </p>
           </div>
           <router-link  class="tooltip boater-link page_link" to="/" @click.native="eventBus.$emit('change-direction', 'slide-up')">
-              <div>
+              <div class="img-wrap">
                   <img src="imgs/end-shark-week-sign.jpg" alt="shark">
               </div>
               <p class="tooltiptext"> Take me Home</p>

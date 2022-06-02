@@ -1,3 +1,8 @@
+.p5Canvas {
+  position: absolute;
+  z-index: -100;
+}
+
 body {
   font-family: "Source Code Pro", monospace;
   overflow: hidden;
@@ -5,6 +10,9 @@ body {
   color: white;
   margin: 0;
   line-height: 1.5;
+}
+button {
+  rotate: -90deg;
 }
 strong {
   color: #ff998b;
@@ -203,11 +211,12 @@ img {
 /* boater page */
 .boater-page_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
 }
 .boater-page_content {
   max-width: 600px;
+  margin:  0 0 0 10px;
 }
 .page_link {
   flex-direction: column;
@@ -216,7 +225,7 @@ img {
   width: auto;
 }
 .page_link div img {
-  height: 80vh;
+  height: 50vw;
 }
 .page_link .tooltiptext {
   margin-bottom: 0;
@@ -248,7 +257,7 @@ img {
 }
 .shark-page_content {
   max-width: 20vw;
-  margin: 0;
+  margin: 0 0 0 10px;
   align-self: flex-start;
 }
 .shark-link-back {
@@ -259,7 +268,7 @@ img {
 
 }
 .shark-link-back img {
-  height: 50vh;
+  height: 30vw;
 }
 .shark-link-back .tooltiptext {
   position: relative;
@@ -298,6 +307,7 @@ img {
 }
 .merch-icon svg {
   max-width: 6vw;
+  min-width: 50px;
 }
 .merch-icon:hover svg {
   
@@ -342,7 +352,7 @@ img {
 }
 .merch-item {
   width: 20vw;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.55);
   padding: 10px 15px 10px;
   margin: 15px;
   border-radius: 10px;
@@ -432,4 +442,158 @@ img {
 .fade-enter, .fade-leave-to {
   opacity: 0;
   transform: scale(1.2);
+}
+
+@media (max-width: 760px) {
+  /* body {
+    overflow-y: scroll;
+  } */
+  .view-container {
+    justify-content: flex-start;
+    height: auto;
+  }
+  .top-links {
+    width: 100vw;
+    /* margin: 10px; */
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .right-point, .left-point, .top-point, .bottom-point {
+    display: none;
+  }
+  .dolphin-link {
+    flex-direction: column;
+    margin: 0;
+    width: 40vw;
+  }
+  .boater-link {
+    margin: 0;
+    flex-direction: column-reverse;
+    width: 40vw;
+  }
+  .boater-link img, .dolphin-link img {
+    height: 175px;
+    /* max-width: 40vw; */
+  }
+  .boater-link p, .dolphin-link p, .shark-link p, .shark-link-back p, .merch-icon p {
+    font-size: 14px;
+    font-weight: 400;
+    /* letter-spacing: 6px; */
+    /* text-transform: uppercase; */
+    margin-top: 5px;
+  }
+  .merch-icon p {
+    margin-left: 5px;
+  }
+  .tooltip .tooltiptext {
+    opacity: 1;
+    padding: 0;
+    background: none;
+    color: white;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.133);
+  }
+  .img-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .club-txt {
+    font-size: 16px;
+    margin: 50px auto;
+  }
+  .club-txt_of {
+    font-size: 14px;
+  }
+  .club-txt_bottom {
+    font-size: 26px;
+  }
+  .boater-page_container {
+    flex-direction: column;
+    height: 100vh;
+    /* align-items: flex-start; */
+    overflow-y: auto;
+    position: relative;
+  }
+  .boater-page_content h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .boater-page_content ul {
+    padding: 0;
+  }
+  .boater-page_content li {
+    padding: 10px 30px;
+  }
+  .dolphins-page_justify  {
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
+
+  }
+  .shark-page_container {
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .boater-page_content, .dolphin-page_content, .merch-page_content  {
+    margin: 0 10px;
+  }
+  .page_link {
+    align-items: center;
+  }
+  .page_link div img {
+    height: 20vh;
+  }
+  .shark-link-back  {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    width: auto;
+    margin: 0 0 0;
+    position: absolute;
+    top: 20px;
+    right: calc(50% - 15vw);
+  }
+  .shark-page_header {
+    width: 100%;
+  }
+  .shark-page_header h2 {
+    margin: 190px 10px 20px;
+    padding-bottom: 20px;
+    font-size: 1.25rem;
+  }
+  .shark-page_content {
+    max-width: 100%;
+    margin: 0 10px;
+    padding: 0;
+  }
+  .shark-page_content li {
+    padding: 5px 10px;
+  }
+  .merch-page_content h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 190px;
+  }
+  .merch-page_container  .merch-icon {
+    position: absolute;
+    top: 10px;
+    bottom: auto;
+  }
+  .merch-page_container {
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .merch-container {
+    flex-direction: column;
+  }
+  .merch-item {
+    width: auto;
+  }
 }
